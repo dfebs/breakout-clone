@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cv3clcan31v58"]
+
+[ext_resource type="Texture2D" uid="uid://bdyfetxc1xehp" path="res://sprites/target/target_tilesheet.png" id="1_35rod"]
+[ext_resource type="Script" uid="uid://cfpgffbltyuyd" path="res://target.gd" id="1_e1yvt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1yvt"]
+size = Vector2(96, 36)
+
+[node name="Target" type="StaticBody2D" unique_id=353059908]
+script = ExtResource("1_e1yvt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=818992197]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_35rod")
+region_enabled = true
+region_rect = Rect2(0, 0, 128, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=701378963]
+shape = SubResource("RectangleShape2D_e1yvt")
