@@ -21,7 +21,7 @@ jobs:
         uses: dsaltares/fetch-gh-release-asset@master
         with:
           file: Web.zip
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_CREDENTIALS }}
           version: "tags/${{needs.setup_job.outputs.versionNumber}}"
       - name: deploy to itch.io (HTML5)
         uses: yeslayla/butler-publish-itchio-action@master
